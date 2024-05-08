@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>about human</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h3>PERSON ID: <mark>{{id}}</mark></h3>
+    <h3>PERSON FIRST_NAME: <mark>{{f_name}}</mark></h3>
+    <h3>PERSON LAST_NAME: <mark>{{l_name}}</mark></h3>
+    <h3>PERSON's COUNTRY: <mark>{{country}}</mark></h3>
+    <h3>PERSON AGE: <mark>{{age}}</mark></h3>
+    <h3>PERSON's FAMILY_MEMBERS: <mark>{{family_member}}</mark></h3>
+    <h3>PERSON's FAVOURITE_SUBJECT: <mark>{{fav_subject}}</mark></h3>
+    <h3>PERSON's FAVOURITE COLOR: <mark>{{fav_color}}</mark></h3>
+
+
+
+    
+    <form method="get">
+        <h2><em>Enter your detail</em></h2>
+        <input type="number", placeholder="Id" name="id">
+        <input type="text" placeholder="FirstName" name="f_name">
+        <input type="text" placeholder="LastName" name="l_name">
+        <input type="text" placeholder="Country" name="country">
+        <input type="number" placeholder="Age" name="age">
+        <input type="number" placeholder="FamilyMembers" name="family_member">
+        <input type="text" placeholder="FavSubject" name="fav_subject">
+        <input type="color" placeholder="FavColor" name="fav_color">
+        <button type="submit">Send</button>
+    </form>
+
+    <form method="post">
+        {% csrf_token %}
+        <h2><i>Your Mainly Detail!</i></h2>
+        <input type="text" placeholder="FirstName" name="f_name">
+        <input type="text" placeholder="LastName" name="l_name">
+        <input type="date" placeholder="Age" name="b_yr">
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
